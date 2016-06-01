@@ -1,0 +1,61 @@
+{
+  "name": "react-native-scrollable-list",
+  "version": "1.0.0",
+  "description": "A ListView without the boilerplate.",
+  "main": "dist/index.js",
+  "files": [
+    "bin/",
+    "dist/"
+  ],
+  "scripts": {
+    "clean": "rimraf dist",
+    "lint": "eslint src",
+    "check": "npm run lint -s && dependency-check package.json --entry src",
+    "watch": "watch 'npm run build' src",
+    "prebuild": "npm run check -s && npm run clean -s",
+    "build": "babel --optional runtime src -d dist",
+    "prepublish": "npm run build -s",
+    "deploy": "git pull --rebase origin master && git push origin master",
+    "patch": "npm version patch && npm publish",
+    "minor": "npm version minor && npm publish",
+    "major": "npm version major && npm publish",
+    "postpublish": "git push origin master --follow-tags",
+    "toc": "doctoc --github --title \"# Changelog\" CHANGELOG.md"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nachoaIvarez/react-native-scrollable-list.git"
+  },
+  "keywords": [
+    "react",
+    "react-native",
+    "ListView",
+    "wrapper"
+  ],
+  "author": " <ignacioalvarez92@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nachoaIvarez/react-native-scrollable-list/issues"
+  },
+  "homepage": "https://github.com/nachoaIvarez/react-native-scrollable-list#readme",
+  "devDependencies": {
+    "babel-cli": "^6.9.0",
+    "babel-core": "^6.9.1",
+    "babel-eslint": "*",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-react-native": "^1.9.0",
+    "coveralls": "*",
+    "dependency-check": "*",
+    "doctoc": "*",
+    "eslint": "*",
+    "isparta": "*",
+    "rimraf": "*",
+    "tap-spec": "*",
+    "tape": "*",
+    "watch": "*"
+  },
+  "peerDependencies": {
+    "react": "15.1.0",
+    "react-native": "0.26.2"
+  }
+}
