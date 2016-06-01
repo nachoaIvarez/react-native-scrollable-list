@@ -39,9 +39,9 @@ export default (<ScrollableList data={celebrities} row={Celebrity} />);
 
 That's it.
 
-That will render a ListView, with all the `dataSource`, `cloneWithRows`, and all that boilerplate nobody wants to write.
+That will render a `ListView`, with all the `dataSource`, `cloneWithRows`, and all that boilerplate nobody wants to write.
 
-All entries from each object in `data` will be mapped to props to the component passed through the `row` prop. In this example all `<Celebrity>` components will receive `name` and `role` of each object, that is `<Celebrity name={...} role={...}>`.
+All entries from each object in `data` will be mapped as props to the component passed through the `row` prop. In this example all `<Celebrity>` components will receive `name` and `role` of each object, that is `<Celebrity name={...} role={...}>`.
 
 If you want to pass any of the `ListView` other props (like `style`, `onEndReached`, `onChangeVisibleRows`, etc), just pass them to `ScrollableList`, and they will reach `ListView`.
 
