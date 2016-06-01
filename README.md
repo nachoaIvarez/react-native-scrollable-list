@@ -4,7 +4,7 @@
 [![Dependency Status][depstat-image]][depstat-url]
 [![Downloads][download-badge]][npm-url]
 
-> A ListView without the friction.
+> A ListView without the boilerplate.
 
 ## Install
 
