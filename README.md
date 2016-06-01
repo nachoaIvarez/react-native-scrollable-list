@@ -4,7 +4,7 @@
 [![Dependency Status][depstat-image]][depstat-url]
 [![Downloads][download-badge]][npm-url]
 
-> A ListView without the boilerplate.
+> A ListView without the friction.
 
 ## Install
 
@@ -39,7 +39,7 @@ export default (<ScrollableList data={celebrities} row={Celebrity} />);
 
 That's it.
 
-That will render a `ListView`, with all the `dataSource`, `cloneWithRows`, and all that boilerplate nobody wants to write.
+That will render a `ListView`, with all the `dataSource`, `cloneWithRows`, and all that boilerplate code nobody wants to write.
 
 All entries from each object in `data` will be mapped as props to the component passed through the `row` prop. In this example all `<Celebrity>` components will receive `name` and `role` of each object, that is `<Celebrity name={...} role={...}>`.
 
