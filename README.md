@@ -18,7 +18,7 @@ npm i -D react-native-scrollable-list
 import ScrollableList from 'react-native-scrollable-list';
 
 
-const celebrities = {
+const celebrities = [
     name: 'Leonardo Di Caprio',
     role: 'Actor',
   },
@@ -30,7 +30,7 @@ const celebrities = {
     name: 'Eddie Van Halen',
     role: 'Guitar Player',
   },
-};
+];
 
 const Celebrity = ({name, role}) => (<Text>Name: {name}{\n}Role: {role}</Text>);
 
