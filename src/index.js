@@ -9,10 +9,18 @@ class ScrollableList extends Component {
     this.otherProps = other;
     this.row = row;
 
-    const ds = new ListView.DataSource({ rowHasChanged: (r1, r2) => r1 !== r2 });
+    this._ds = new ListView.DataSource({ rowHasChanged: (r1, r2) => r1 !== r2 });
     this.state = {
-      dataSource: ds.cloneWithRows(data),
+      dataSource: this._ds.cloneWithRows(data),
     };
+  }
+
+  componentWillReceiveProps(props){
+    if(this.props.data !== props.data){
+      this.setState({
+        dataSource: this._ds.cloneWithRows(props.data)
+      });
+    } 
   }
 
   render() {
