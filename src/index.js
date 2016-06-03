@@ -15,12 +15,12 @@ class ScrollableList extends Component {
     };
   }
 
-  componentWillReceiveProps(props){
-    if(this.props.data !== props.data){
+  componentWillReceiveProps(props) {
+    if(this.props.data !== props.data) {
       this.setState({
         dataSource: this._ds.cloneWithRows(props.data)
       });
-    } 
+    }
   }
 
   render() {
@@ -29,7 +29,7 @@ class ScrollableList extends Component {
       <ListView
         {...this.otherProps}
         dataSource={this.state.dataSource}
-        renderRow={(data) => <Row {...data} />}
+        renderRow={(data, ...rest) => <Row {...data} {...rest} />}
       />
     );
   }

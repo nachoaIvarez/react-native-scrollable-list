@@ -55,7 +55,7 @@
     "watch": "*"
   },
   "peerDependencies": {
-    "react": "15.1.0",
-    "react-native": "0.26.2"
+    "react": "*",
+    "react-native": "*"
   }
 }
