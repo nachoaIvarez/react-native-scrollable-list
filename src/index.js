@@ -29,7 +29,14 @@ class ScrollableList extends Component {
       <ListView
         {...this.otherProps}
         dataSource={this.state.dataSource}
-        renderRow={(data, ...rest) => <Row {...data} {...rest} />}
+        renderRow={(data, sectionID, rowID, highlightRow) => (
+          <Row
+            {...data}
+            sectionID={sectionID}
+            rowID={rowID}
+            highlightRow={highlightRow}
+          />
+        )}
       />
     );
   }
