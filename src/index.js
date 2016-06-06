@@ -1,42 +1,41 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 import { ListView } from 'react-native';
 
+const { array, func } = PropTypes;
+
 class ScrollableList extends Component {
+  static propTypes = {
+    data: array.isRequired,
+    renderRow: func.isRequired,
+  }
+
   constructor(props) {
     super(props);
 
-    const { data, row, ...other } = props;
+    const { data, renderRow, ...other } = props;
     this.otherProps = other;
-    this.row = row;
+    this.renderRow = renderRow;
 
-    this._ds = new ListView.DataSource({ rowHasChanged: (r1, r2) => r1 !== r2 });
+    this.ds = new ListView.DataSource({ rowHasChanged: (r1, r2) => r1 !== r2 });
     this.state = {
-      dataSource: this._ds.cloneWithRows(data),
+      dataSource: this.ds.cloneWithRows(data),
     };
   }
 
   componentWillReceiveProps(props) {
-    if(this.props.data !== props.data) {
+    if (this.props.data !== props.data) {
       this.setState({
-        dataSource: this._ds.cloneWithRows(props.data)
+        dataSource: this.ds.cloneWithRows(props.data),
       });
     }
   }
 
   render() {
-    const Row = this.row;
     return (
       <ListView
         {...this.otherProps}
         dataSource={this.state.dataSource}
-        renderRow={(data, sectionID, rowID, highlightRow) => (
-          <Row
-            {...data}
-            sectionID={sectionID}
-            rowID={rowID}
-            highlightRow={highlightRow}
-          />
-        )}
+        renderRow={this.renderRow}
       />
     );
   }
