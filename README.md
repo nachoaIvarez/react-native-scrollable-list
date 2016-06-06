@@ -1,5 +1,6 @@
 # react-native-scrollable-list
 
+[![Build Status][travis-badge]][travis-url]
 [![NPM version][npm-image]][npm-url]
 [![Dependency Status][depstat-image]][depstat-url]
 [![Downloads][download-badge]][npm-url]
@@ -55,3 +56,6 @@ MIT © [](http://github.com/nachoaIvarez)
 [depstat-image]: https://david-dm.org/nachoaIvarez/react-native-scrollable-list.svg?style=flat-square
 
 [download-badge]: http://img.shields.io/npm/dm/react-native-scrollable-list.svg?style=flat-square
+
+[travis-badge]: https://api.travis-ci.org/nachoaIvarez/react-native-scrollable-list.svg?branch=master
+[travis-url]: https://travis-ci.org/nachoaIvarez/react-native-scrollable-list
