@@ -1,6 +1,6 @@
 {
   "name": "react-native-scrollable-list",
-  "version": "1.4.1",
+  "version": "2.0.0",
   "description": "A ListView without the boilerplate.",
   "main": "dist/index.js",
   "files": [
