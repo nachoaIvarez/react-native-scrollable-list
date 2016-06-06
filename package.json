@@ -48,6 +48,8 @@
     "eslint-plugin-jsx-a11y": "*",
     "eslint-plugin-react": "*",
     "eslint": "*",
+    "react-native": "*",
+    "react": "*",
     "rimraf": "*"
   },
   "peerDependencies": {
