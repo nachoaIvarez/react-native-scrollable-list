@@ -16,7 +16,7 @@ npm i -D react-native-scrollable-list
 
 ```js
 import ScrollableList from 'react-native-scrollable-list';
-
+// other imports
 
 const celebrities = [
     name: 'Leonardo Di Caprio',
@@ -34,7 +34,7 @@ const celebrities = [
 
 const Celebrity = ({name, role}) => (<Text>Name: {name}{\n}Role: {role}</Text>);
 
-export default (<ScrollableList data={celebrities} row={Celebrity} />);
+export default (<ScrollableList data={celebrities} renderRow={(data) => <Celebrity {..data} />);
 ```
 
 That's it.
@@ -42,12 +42,7 @@ That's it.
 That will render a `ListView`, with all the `dataSource`, `cloneWithRows`, and all that boilerplate code nobody wants to write.
 
 ## Props
-
-- All entries from each object in `data` will be mapped as props to the component passed through the `row` prop. In this example all `<Celebrity>` components will receive `name` and `role` of each object, that is `<Celebrity name={...} role={...} />`.
-
-- The rest of `ListView`'s [`renderRow` arguments](https://facebook.github.io/react-native/docs/listview.html#renderrow) (`sectionID`, `rowID`, `highlightRow`) are [passed as props](https://github.com/nachoaIvarez/react-native-scrollable-list/blob/master/src/index.js#L32) to the Component received via the `row` prop, which in our example means: `<Celebrity name={...} role={...} sectionID={...} rowID={...} highlightRow={...} />`
-
-- If you want to pass any of the `ListView` other props (like `style`, `onEndReached`, `onChangeVisibleRows`, etc), just pass them to `ScrollableList`, and they will reach `ListView`.
+First, check [`ListView`'s props](https://facebook.github.io/react-native/docs/listview.html). `ScrollableList` is compliant. If you want to pass any of the `ListView` props (like `style`, `onEndReached`, `onChangeVisibleRows`, etc), just pass them to `ScrollableList`, and they will reach `ListView`.
 
 ## License
 
