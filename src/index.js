@@ -12,9 +12,8 @@ class ScrollableList extends Component {
   constructor(props) {
     super(props);
 
-    const { data, renderRow, ...other } = props;
+    const { data, ...other } = props;
     this.otherProps = other;
-    this.renderRow = renderRow;
 
     this.ds = new ListView.DataSource({ rowHasChanged: (r1, r2) => r1 !== r2 });
     this.state = {
@@ -35,7 +34,6 @@ class ScrollableList extends Component {
       <ListView
         {...this.otherProps}
         dataSource={this.state.dataSource}
-        renderRow={this.renderRow}
       />
     );
   }
