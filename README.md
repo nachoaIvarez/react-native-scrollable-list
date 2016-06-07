@@ -10,13 +10,13 @@
 ## Install
 
 ```sh
-npm i -D react-native-scrollable-list
+npm install --save react-native-scrollable-list
 ```
 
 ## Usage
 
 ```js
-import ScrollableList from 'react-native-scrollable-list';
+import ScrollableList from 'react-native-scrollable-list'
 // other imports
 
 const celebrities = [
@@ -31,23 +31,23 @@ const celebrities = [
     name: 'Eddie Van Halen',
     role: 'Guitar Player',
   },
-];
+]
 
-const Celebrity = ({name, role}) => (<Text>Name: {name}{\n}Role: {role}</Text>);
+const Celebrity = ({name, role}) => (<Text>Name: {name}{\n}Role: {role}</Text>)
 
-export default (<ScrollableList data={celebrities} renderRow={(data) => <Celebrity {..data} />);
+export default (<ScrollableList data={celebrities} renderRow={(data) => <Celebrity {...data} />} />)
 ```
 
 That's it.
 
-That will render a `ListView`, with all the `dataSource`, `cloneWithRows`, and all that boilerplate code nobody wants to write.
+That will render a `ListView`, with all the `dataSource`, `cloneWithRows`, and all that boilerplate code nobody wants to write. And, when `data` changes, updates `dataSource` gracefully, without forcing re-rendering.
 
 ## Props
 First, check [`ListView`'s props](https://facebook.github.io/react-native/docs/listview.html). `ScrollableList` is compliant. If you want to pass any of the `ListView` props (like `style`, `onEndReached`, `onChangeVisibleRows`, etc), just pass them to `ScrollableList`, and they will reach `ListView`.
 
 ## License
 
-MIT © [](http://github.com/nachoaIvarez)
+MIT © [Nacho Álvarez](http://github.com/nachoaIvarez)
 
 [npm-url]: https://npmjs.org/package/react-native-scrollable-list
 [npm-image]: https://img.shields.io/npm/v/react-native-scrollable-list.svg?style=flat-square
