@@ -28,8 +28,8 @@ class ScrollableList extends Component {
   componentWillReceiveProps(props) {
     if (this.props.data !== props.data) {
 
-      if (this.props.data == null) {
-        this.props.data = [];
+      if (props.data == null) {
+        props.data = [];
       }
 
       this.setState({
