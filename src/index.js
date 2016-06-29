@@ -28,7 +28,7 @@ class ScrollableList extends Component {
   componentWillReceiveProps(props) {
     if (this.props.data !== props.data) {
       this.setState({
-        dataSource: this.ds.cloneWithRows(props.data),
+        dataSource: this.ds.cloneWithRows(props.data || []),
       });
     }
   }
@@ -65,4 +65,3 @@ class ScrollableList extends Component {
 }
 
 export default ScrollableList;
-
