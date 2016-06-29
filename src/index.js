@@ -28,7 +28,6 @@ class ScrollableList extends Component {
   componentWillReceiveProps(props) {
     if (this.props.data !== props.data) {
       this.setState({
-        // If props.data == null, set an empty array instead
         dataSource: this.ds.cloneWithRows(props.data || []),
       });
     }
