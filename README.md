@@ -20,6 +20,7 @@ import ScrollableList from 'react-native-scrollable-list'
 // other imports
 
 const celebrities = [
+  {
     name: 'Leonardo Di Caprio',
     role: 'Actor',
   },
@@ -33,7 +34,7 @@ const celebrities = [
   },
 ]
 
-const Celebrity = ({name, role}) => (<Text>Name: {name}{\n}Role: {role}</Text>)
+const Celebrity = ({name, role}) => (<Text>Name: {name}{'\n'}Role: {role}</Text>)
 
 export default (<ScrollableList data={celebrities} renderRow={(data) => <Celebrity {...data} />} />)
 ```
