@@ -1,5 +1,7 @@
 # react-native-scrollable-list
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/nachoaIvarez/react-native-scrollable-list.svg)](https://greenkeeper.io/)
+
 [![Build Status][travis-badge]][travis-url]
 [![NPM version][npm-image]][npm-url]
 [![Dependency Status][depstat-image]][depstat-url]
