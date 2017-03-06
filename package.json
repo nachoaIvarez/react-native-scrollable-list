@@ -47,7 +47,7 @@
     "eslint-plugin-import": "*",
     "eslint-plugin-jsx-a11y": "*",
     "eslint-plugin-react": "*",
-    "eslint": "*",
+    "eslint": ">=3.17.1",
     "react-native": "*",
     "react": "*",
     "rimraf": "*"
